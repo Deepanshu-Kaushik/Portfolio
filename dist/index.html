@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="short.css">
+</head>
+<body class="bg-black">
+    <header>
+        <nav class="w-full h-16">
+            <div class="mt-3 h-full flex justify-between px-10 md:px-20 lg:px-30 text-white items-center tracking-widest">
+                <div class="text-3xl md:text-4xl lg:text-5xl font-bold justify-center">
+                    <span class="text-sky-300">D</span>eepanshu.
+                </div>
+                <div>
+                    <ul class="w-full md:flex md:text-base lg:text-xl items-center font-semibold hidden">
+                        <li class="effects mx-[10px] md:mx-[20px] cursor-pointer">Home</li>
+                        <li class="effects mx-[10px] md:mx-[20px] cursor-pointer">About</li>
+                        <li class="effects mx-[10px] md:mx-[20px] cursor-pointer">Services</li>
+                        <li class="effects mx-[10px] md:mx-[20px] cursor-pointer">Portfolio</li>
+                        <li class="effects mx-[10px] md:mx-[20px] cursor-pointer">Contact</li>
+                    </ul>
+                    <div class="text-4xl block md:hidden hover:text-sky-300"><a href="#">&#9776;</a></div>
+                </div>
+            </div>
+        </nav>
+        <div class="text-white w-[80%] m-auto mt-72 flex flex-col justify-center gap-3">
+            <p class="text-3xl">UI/UX Designer</p>
+            <h1 class="text-6xl font-bold leading-[1.2]">Hi, I'm <span class="text-sky-300">Deepanshu Kaushik</span><br> from New Delhi</h1>
+        </div>
+    </header>
+    
+    <section>
+        <div class="about flex m-auto w-[90%] flex-wrap py-20 text-white" style="justify-content: space-evenly">
+            <div class="image basis-[30%]">
+                <img src="../images/user.png" class="w-full rounded-2xl">
+            </div>
+            <div class="details basis-[60%]">
+                <h1 class="text-6xl text-sky-300 font-bold">About Me</h1>
+                <p class="text-white py-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore accusamus, facere est voluptates dolorum commodi assumenda veritatis quisquam ratione natus sed vitae saepe aut maxime nesciunt quis! Alias beatae ipsam cupiditate quidem repellat doloribus et in sit deleniti quia, non numquam soluta minus hic voluptas maiores exercitationem inventore necessitatibus quos, aliquid ducimus incidunt. Esse quia voluptatem aut error porro suscipit quasi necessitatibus, cumque sunt officiis quaerat corrupti deleniti dicta saepe minima vel maxime placeat vitae? Impedit quas similique ad temporibus obcaecati, architecto quod. Temporibus officia aut non corrupti consequuntur explicabo! Inventore, provident. Iusto alias hic esse ea nobis vitae fugit!</p>
+                <div class="flex mt-5 mb-10">
+                    <div class="mr-12 text-2xl font-semibold cursor-pointer relative tab-links active-link" onclick="tabclick('skills')">Skills</div>
+                    <div class="mr-12 text-2xl font-semibold cursor-pointer relative tab-links" onclick="tabclick('experience')">Experience</div>
+                    <div class="mr-12 text-2xl font-semibold cursor-pointer relative tab-links" onclick="tabclick('education')">Education</div>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li class="my-2"><span class="text-sky-200 text-xl">UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li class="my-2"><span class="text-sky-200 text-xl">Web Development</span><br>Web App Development</li>
+                        <li class="my-2"><span class="text-sky-200 text-xl">App Development</span><br>Building Android/iOS apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li class="my-2"><span class="text-sky-200 text-xl">UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li class="my-2"><span class="text-sky-200 text-xl">Web Development</span><br>Web App Development</li>
+                        <li class="my-2"><span class="text-sky-200 text-xl">App Development</span><br>Building Android/iOS apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li class="my-2"><span class="text-sky-200 text-xl">UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li class="my-2"><span class="text-sky-200 text-xl">Web Development</span><br>Web App Development</li>
+                        <li class="my-2"><span class="text-sky-200 text-xl">App Development</span><br>Building Android/iOS apps</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+
+    </section>
+
+    <script>
+        let tablinks = document.getElementsByClassName('tab-links');
+        let tabcontents = document.getElementsByClassName('tab-contents');
+
+        function tabclick(tabname) {
+            for(tablink of tablinks) {
+                tablink.classList.remove('active-link');
+            }
+            for(tabcontent of tabcontents) {
+                tabcontent.classList.remove('active-tab');
+            }
+
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(tabname).classList.add('active-tab');
+        }
+    </script>
+</body>
+</html>
